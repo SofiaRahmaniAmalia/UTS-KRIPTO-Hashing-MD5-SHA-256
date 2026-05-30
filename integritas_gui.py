@@ -70,7 +70,6 @@ class App(tk.Tk):
     def _build_ui(self):
         padding = 12
 
-        # Frame input asli
         frm_asli = ttk.LabelFrame(self, text="File Asli")
         frm_asli.pack(fill="x", padx=padding, pady=(padding, 8))
 
@@ -80,7 +79,6 @@ class App(tk.Tk):
         btn_pilih_asli = ttk.Button(frm_asli, text="Pilih File Asli", command=self.choose_asli)
         btn_pilih_asli.pack(side="left", padx=(0, padding), pady=10)
 
-        # Frame input dimodifikasi
         frm_mod = ttk.LabelFrame(self, text="File Dimodifikasi")
         frm_mod.pack(fill="x", padx=padding, pady=8)
 
@@ -90,7 +88,7 @@ class App(tk.Tk):
         btn_pilih_mod = ttk.Button(frm_mod, text="Pilih File Dimodifikasi", command=self.choose_mod)
         btn_pilih_mod.pack(side="left", padx=(0, padding), pady=10)
 
-        # Tombol proses
+      
         frm_btn = ttk.Frame(self)
         frm_btn.pack(fill="x", padx=padding, pady=10)
 
@@ -100,14 +98,14 @@ class App(tk.Tk):
         btn_clear = ttk.Button(frm_btn, text="Bersihkan Output", command=self.clear_output)
         btn_clear.pack(side="left", padx=10)
 
-        # Output area
+        
         frm_out = ttk.LabelFrame(self, text="Output (Hash & Analisis)")
         frm_out.pack(fill="both", expand=True, padx=padding, pady=(6, padding))
 
         self.text = tk.Text(frm_out, wrap="word", font=("Consolas", 10))
         self.text.pack(fill="both", expand=True, padx=10, pady=10)
 
-        # Scrollbar
+        
         scroll = ttk.Scrollbar(self.text, command=self.text.yview)
         self.text.configure(yscrollcommand=scroll.set)
         scroll.place(relx=1.0, rely=0.0, relheight=1.0, anchor="ne")
