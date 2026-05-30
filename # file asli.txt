@@ -1,0 +1,6 @@
+# file asli
+
+with open("file_asli.txt","w") as f:
+    f.write("""Nama : HELO KALULA
+Tugas : Kriptografi
+Status : Original""")

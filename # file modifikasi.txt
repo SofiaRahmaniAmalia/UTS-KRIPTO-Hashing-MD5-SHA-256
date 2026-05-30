@@ -1,0 +1,6 @@
+# file modifikasi
+
+with open("file_modifikasi.txt","w") as f:
+    f.write("""Nama : Hello Kalula
+Tugas : Kriptografi
+Status : INI ORIII""")
